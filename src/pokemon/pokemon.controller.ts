@@ -18,7 +18,7 @@ export class PokemonController {
     return this.pokemonService.findAll();
   }
 
-  @Get(':term')
+  @Get('term')
   findOne(@Param('term') term: string) {
     return this.pokemonService.findOne(term);
   }
@@ -30,6 +30,6 @@ export class PokemonController {
 
   @Delete(':id')
   remove(@Param('id',ParseMongoIdPipe) id: string) {
-    return this.pokemonService.remove( id);
+    return this.pokemonService.remove( id );
   }
 }
